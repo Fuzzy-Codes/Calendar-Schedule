@@ -1,7 +1,7 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-var date = day.js().format('dddd, MMMM D YYYY, h:mm:ss ');
+var date = dayjs().format('dddd, MMMM D YYYY, h:mm:ss ');
 var currentDateAndTime = document.getElementById('currentDay')
 currentDateAndTime.textContent = date
 
@@ -41,7 +41,7 @@ function init() {
 $(function event() {
     var currentHour = new date().getHour();
     $('time-block').each(function () {
-        var eventStatus = parseInt($(this).attr('fuzzy-time'));
+        var eventStatus = parseInt($(this).attr('time'));
 
         if (eventStatus < currentHour) {
             $(this).addClass('past');
